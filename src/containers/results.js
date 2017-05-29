@@ -1,17 +1,12 @@
 import Results from '../components/results';
 import {connect} from 'react-redux';
-import { setMilesRadius, loadResults } from '../actions'
+import { loadResults } from '../actions'
 
 const mapStateToProps = (state) => ({
 	results: state.results
 })
 
 const mapDispatchToProps = dispatch => ({
-	onSetMilesRadius(radius) {
-		dispatch(
-			setMilesRadius(radius)
-		)
-	},
 	onLoadResults() {
 		dispatch(
 			loadResults()

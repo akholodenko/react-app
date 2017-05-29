@@ -1,13 +1,13 @@
 import C from './constants/actions';
 import { load } from './models/contractors'
 
-export const setMilesRadius = (radius) => ({
+export const setMilesRadius = (milesRadius) => ({
 	type: C.SET_MILES_RADIUS,
-	payload: radius
+	payload: milesRadius
 })
 
-export const loadResults = () => dispatch => {
-	load().then((response) => {
+export const loadResults = (milesRadius) => dispatch => {
+	load(milesRadius).then((response) => {
 		console.log('loadResults', response.data);
 
 		dispatch({
