@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 class Results extends Component {
 	componentWillMount() {
-		this.props.onLoadResults()
+		this.props.onLoadResults(this.props.filters)
 	}
 
 	render() {

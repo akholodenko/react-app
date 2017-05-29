@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Results from "./containers/results";
 import MilesRadius from "./containers/miles_radius";
+import PageSelector from "./containers/page_selector";
 
 class App extends Component {
 	render() {
@@ -14,6 +15,7 @@ class App extends Component {
 				</div>
 				<div>
 					<MilesRadius/>
+					<PageSelector/>
 				</div>
 				<Results/>
 			</div>

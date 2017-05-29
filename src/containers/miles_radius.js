@@ -3,17 +3,17 @@ import {connect} from 'react-redux';
 import { loadResults, setMilesRadius } from '../actions'
 
 const mapStateToProps = (state) => ({
-	milesRadius: state.milesRadius
+	filters: state.filters
 })
 
 const mapDispatchToProps = dispatch => ({
-	onSetMilesRadius(milesRadius) {
+	onSetMilesRadius(filters) {
 		dispatch(
-			setMilesRadius(milesRadius)
+			setMilesRadius(filters.milesRadius)
 		)
 
 		dispatch(
-			loadResults(milesRadius)
+			loadResults(filters)
 		)
 	}
 })

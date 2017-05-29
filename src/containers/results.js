@@ -3,13 +3,14 @@ import {connect} from 'react-redux';
 import { loadResults } from '../actions'
 
 const mapStateToProps = (state) => ({
+	filters: state.filters,
 	results: state.results
 })
 
 const mapDispatchToProps = dispatch => ({
-	onLoadResults() {
+	onLoadResults(filters) {
 		dispatch(
-			loadResults()
+			loadResults(filters)
 		)
 	}
 })

@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
-import { milesRadius } from './filters';
+import { filters } from './filters';
 import { results } from './results';
 
 const rootReducer = combineReducers({
-	milesRadius,
+	filters,
 	results
 })
 

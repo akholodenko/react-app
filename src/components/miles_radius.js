@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MilesRadius = ({milesRadius = 50, onSetMilesRadius = f => f}) => {
+const MilesRadius = ({filters = {}, onSetMilesRadius = f => f}) => {
 	let _input
 
 	return (
@@ -8,8 +8,8 @@ const MilesRadius = ({milesRadius = 50, onSetMilesRadius = f => f}) => {
 			<label>Miles radius</label>
 			<input type="number"
 				   ref={input=>_input=input}
-				   defaultValue={milesRadius}
-				   onChange={() => onSetMilesRadius(_input.value)}/>
+				   defaultValue={filters.milesRadius}
+				   onChange={() => onSetMilesRadius({ ...filters, milesRadius: _input.value})}/>
 			<hr/>
 		</div>
 	)

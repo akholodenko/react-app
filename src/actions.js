@@ -6,8 +6,13 @@ export const setMilesRadius = (milesRadius) => ({
 	payload: milesRadius
 })
 
-export const loadResults = (milesRadius) => dispatch => {
-	load(milesRadius).then((response) => {
+export const setPage = (page) => ({
+	type: C.SET_PAGE,
+	payload: page
+})
+
+export const loadResults = (filters) => dispatch => {
+	load(filters).then((response) => {
 		console.log('loadResults', response.data);
 
 		dispatch({
